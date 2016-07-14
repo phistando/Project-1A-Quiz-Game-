@@ -146,7 +146,7 @@ function restart() {
   quiz.isGameOver = false;
   quiz.player1Points = 0;
   quiz.player2Points = 0;
-  location.reload();        //to reload page
+  location.reload();        //to reload browser page
 }
 
 //function to update scores,questions and quiz outcome after click selections from players
