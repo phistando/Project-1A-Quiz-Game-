@@ -151,7 +151,12 @@ function restart() {
 
 //function to update scores,questions and quiz outcome after click selections from players
 function updateQuiz() {
-  $('#QnNo').html('Question ' + (currentQuestion() + 1));
+  if (quiz.currentQns % 2 === 0){
+  $('#QnNo').html('Question ' + (currentQuestion() + 1) + ' ' + '(Player One)' );
+  }else if(quiz.currentQns % 2 !== 0){
+  $('#QnNo').html('Question ' + (currentQuestion() + 1) + ' ' + '(Player Two)' );
+  }
+  
   $('#quizQns').html(quiz.totalQns[currentQuestion()].question);
   $('#player1Score').html('Player One: ' + quiz.player1Points);
   $('#player2Score').html('Player Two: ' + quiz.player2Points);
