@@ -11,7 +11,7 @@ function Question (qn, ans, correctAnsIndex) {
 var qn0 = new Question('World War 1 began after the assassination of Arch-Duke Ferdinand of the Austro-Hungarian empire in 1914.', ['True', 'False'], 0);
 var qn1 = new Question('Adolf Hitler was born in Munich, Germany.', ['True', 'False'], 1);
 var qn2 = new Question('The first successful printing press was developed by Johannes Gutenburg.', ['True', 'False'], 0);
-var qn3 = new Question('The disease that killed a third of Europe population in the 14th century is known as The Black Plague', ['True', 'False'], 1);
+var qn3 = new Question('The Bubonic Plague killed a third of Europe population in the 14th century.', ['True', 'False'], 0);
 var qn4 = new Question('The Hundred Years War was fought between France and Germany.', ['True', 'False'], 1);
 var qn5 = new Question('Roman Emperor Hadrian built a massive wall across Northern Britain in 122 A.D', ['True', 'False'], 0);
 var qn6 = new Question("Atilla the Hun was a famous 5th century A.D conqueror known as 'The Scourge of God'.", ['True', 'False'], 0);
@@ -156,7 +156,7 @@ function updateQuiz() {
   }else if(quiz.currentQns % 2 !== 0){
   $('#QnNo').html('Question ' + (currentQuestion() + 1) + ' ' + '(Player Two)' );
   }
-  
+
   $('#quizQns').html(quiz.totalQns[currentQuestion()].question);
   $('#player1Score').html('Player One: ' + quiz.player1Points);
   $('#player2Score').html('Player Two: ' + quiz.player2Points);
